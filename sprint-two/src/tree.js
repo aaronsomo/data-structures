@@ -12,7 +12,8 @@ var Tree = function(value) {
 };
 
 var treeMethods = {};
-  treeMethods.addChild = function(value) {
+
+treeMethods.addChild = function(value) {
   var childTree = Tree(value);
   this.children[this.childKey] = childTree;
   this.childKey++;
@@ -30,8 +31,6 @@ treeMethods.contains = function(target) {
   }
   return bool;
 };
-
-
 
 /*
  * Complexity: What is the time complexity of the above functions?

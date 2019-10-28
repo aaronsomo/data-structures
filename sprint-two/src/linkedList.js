@@ -6,30 +6,30 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     var newNode = Node(value);
     if (!list.head) {
-      this.head = newNode;
-      this.tail = this.head;
+      list.head = newNode;
+      list.tail = list.head;
     } else {
-      this.tail = this.head;
-      if (this.tail.next) {
-        this.tail = this.tail.next;
+      list.tail = list.head;
+      if (list.tail.next) {
+        list.tail = list.tail.next;
       }
-      this.tail.next = newNode;
-      this.tail = this.tail.next;
+      list.tail.next = newNode;
+      list.tail = list.tail.next;
     }
   };
 
   list.removeHead = function() {
-    if (this.head) {
-      var returnValue = this.head.value;
-      this.head = this.head.next;
+    if (list.head) {
+      var returnValue = list.head.value;
+      list.head = list.head.next;
       return returnValue;
     }
   };
 
   list.contains = function(target) {
     var current;
-    if (this.head) {
-      current = this.head;
+    if (list.head) {
+      current = list.head;
       while (current) {
         if (current.value === target) {
           return true;
