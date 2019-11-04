@@ -13,7 +13,7 @@ Graph.prototype.addNode = function(node) {
   simpler to assign the value of node as a key that takes in a value (array of connections) as opposed to creating {'key1': value} nodes
   want: {'value': [connections]} not nested objects {'key1': {value: [connections]}}
   */
-  this.nodeObj[node] = [];
+  this.nodeObj[node] = [node];
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
@@ -117,6 +117,12 @@ Graph.prototype.forEachNode = function(cb) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ addNode: constant
+ contains: constant
+ removeNode: constant
+ hasEdge: constant
+ remodeEdge: constant
+ forEachNode: linear
  */
 
 
